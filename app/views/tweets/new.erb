@@ -1,6 +1,4 @@
-<% if flash.has?(:empty_tweet) %>
-  <%= flash[:empty_tweet] %>
-<% end %>
+
 <% if Helpers.is_logged_in?(session) %>
 <%= @error %>
   <form action='/tweets' method="post">
