@@ -100,7 +100,7 @@ class ApplicationController < Sinatra::Base
     @tweet = Tweet.find(params[:id])
     if Helpers.current_user(session).id != @tweet.user_id
       flash[:wrong_user_edit] = "Sorry you can only edit your own tweets"
-      redirect to '/tweets'
+      redirect to '/edit_tweet'
     end
     erb :"tweets/edit_tweet"
   end
